@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Basma EL KHALFI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden scroll-smooth bg-[#1C1E26] min-h-screen">
+    <!-- Background Image -->
+    <div class="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1147');">
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-70 -z-10"></div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-[#1C1E26]/70 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo text-xl md:text-2xl font-bold text-[#FFD580]">Basma EL KHALFI</div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Home</a>
+                <a href="index.html#about" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">About Me</a>
+                <a href="projects.html" class="nav-link text-[#FFD580] font-semibold">Projects</a>
+                <a href="certifications.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Certifications</a>
+                <a href="contact.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-[#FFD580] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu flex-col items-center bg-[#1C1E26]/95 backdrop-blur-md py-4 space-y-4">
+            <a href="index.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Home</a>
+            <a href="index.html#about" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">About Me</a>
+            <a href="projects.html" class="nav-link text-[#FFD580] font-semibold">Projects</a>
+            <a href="certifications.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Certifications</a>
+            <a href="contact.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <main class="pt-20 md:pt-24 px-3 md:px-6 pb-10 md:pb-20 min-h-screen">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Two-Column Layout -->
+            <div class="flex flex-col lg:flex-row gap-4 md:gap-6">
+                
+                <!-- Left: Project List -->
+                <div class="lg:w-1/3 backdrop-blur-md bg-[#1C1E26]/70 rounded-xl md:rounded-2xl p-4 md:p-6 shadow-2xl border border-white/20 h-fit">
+                    <!-- Professional Projects -->
+                    <div class="mb-6 md:mb-8">
+                        <h2 class="text-xl md:text-2xl font-bold text-[#FFD580] mb-3 md:mb-4 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                            </svg>
+                            Professional Projects
+                        </h2>
+                        <div class="space-y-2">
+                            <button onclick="showProject('enl')" class="project-btn w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg bg-[#FFD580]/10 hover:bg-[#FFD580]/30 transition-all border border-[#FFD580]/50 hover:border-[#FFD580]">
+                                <span class="text-[#FFD580] font-semibold text-sm md:text-base">ENL Application</span>
+                                <p class="text-xs text-[#E0E0E0] mt-1">ONEE, 2025</p>
+                            </button>
+                            <button onclick="showProject('crm')" class="project-btn w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg bg-[#FFD580]/10 hover:bg-[#FFD580]/30 transition-all border border-[#FFD580]/50 hover:border-[#FFD580]">
+                                <span class="text-[#FFD580] font-semibold text-sm md:text-base">Mini CRM</span>
+                                <p class="text-xs text-[#E0E0E0] mt-1">Rankin Digital, 2024</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Academic Projects -->
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold text-[#FFD580] mb-3 md:mb-4 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                            </svg>
+                            Academic Projects
+                        </h2>
+                        <div class="space-y-2">
+                            <button onclick="showProject('healthtracker')" class="project-btn w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg bg-[#FFD580]/10 hover:bg-[#FFD580]/30 transition-all border border-[#FFD580]/50 hover:border-[#FFD580]">
+                                <span class="text-[#FFD580] font-semibold text-sm md:text-base">Health Tracker AI</span>
+                                <p class="text-xs text-[#E0E0E0] mt-1">AI-powered health tracking</p>
+                            </button>
+                            <button onclick="showProject('jobmatch')" class="project-btn w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg bg-[#FFD580]/10 hover:bg-[#FFD580]/30 transition-all border border-[#FFD580]/50 hover:border-[#FFD580]">
+                                <span class="text-[#FFD580] font-semibold text-sm md:text-base">JobMatch</span>
+                                <p class="text-xs text-[#E0E0E0] mt-1">Job matching platform</p>
+                            </button>
+                            <button onclick="showProject('ynab')" class="project-btn w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg bg-[#FFD580]/10 hover:bg-[#FFD580]/30 transition-all border border-[#FFD580]/50 hover:border-[#FFD580]">
+                                <span class="text-[#FFD580] font-semibold text-sm md:text-base">YNAB</span>
+                                <p class="text-xs text-[#E0E0E0] mt-1">Budget management</p>
+                            </button>
+                            <button onclick="showProject('aiinterview')" class="project-btn w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg bg-[#FFD580]/10 hover:bg-[#FFD580]/30 transition-all border border-[#FFD580]/50 hover:border-[#FFD580]">
+                                <span class="text-[#FFD580] font-semibold text-sm md:text-base">AI Interview Platform</span>
+                                <p class="text-xs text-[#E0E0E0] mt-1">AI-powered interviews</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Project Details -->
+                <div class="lg:w-2/3 backdrop-blur-md bg-[#1C1E26]/70 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-2xl border border-white/20">
+                    <!-- Default View -->
+                    <div id="default-view" class="text-center py-10 md:py-20">
+                        <svg class="w-16 h-16 md:w-24 md:h-24 mx-auto text-[#FFD580] mb-4 md:mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                        <p class="text-lg md:text-xl text-[#E0E0E0]">Select a project to view details</p>
+                    </div>
+
+                    <!-- Project: ENL -->
+                   <div id="project-enl" class="project-details hidden">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#FFD580] mb-3 md:mb-4">ENL Application</h2>
+    <p class="text-xs md:text-sm text-[#E0E0E0] mb-4 md:mb-6">Professional Project | ONEE, 2025 | 3 months</p>
+    
+    <div class="mb-4 md:mb-6 rounded-xl overflow-hidden border-2 border-[#FFD580]/50 bg-white/5">
+        <img src="images/ENL.png" alt="ENL Application Interface" class="w-full h-[200px] md:h-[280px] object-contain">
+    </div>
+
+                        <div class="mb-4 md:mb-6">
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Description</h3>
+                            <p class="text-[#E0E0E0] leading-relaxed">
+                                Development of a web application for managing Non-Delivered Energy (ENL). The application allows for importing and processing meteorological data, meters, and curtailments, as well as calculating indicators like BinVit and BinDir. It offers an intuitive interface with a centralized dashboard, interactive charts (Chart.js), and secure data management via SQL Server.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">C#</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">ASP.NET Core 6.0</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Razor Pages</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Entity Framework Core</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">SQL Server 2019</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Bootstrap 5.3</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">JavaScript</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">jQuery</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Chart.js</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">EPPlus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: CRM -->
+                  <div id="project-crm" class="project-details hidden">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#FFD580] mb-3 md:mb-4">Mini CRM</h2>
+    <p class="text-xs md:text-sm text-[#E0E0E0] mb-4 md:mb-6">Professional Project | Rankin Digital, 2024 | 2 months</p>
+    
+    <div class="mb-4 md:mb-6 rounded-xl overflow-hidden border-2 border-[#FFD580]/50 bg-white/5">
+        <img src="images/CRM.png" alt="Mini CRM Interface" class="w-full h-[200px] md:h-[280px] object-contain">
+    </div>
+                        <div class="mb-4 md:mb-6">
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Description</h3>
+                            <p class="text-[#E0E0E0] leading-relaxed">
+                                Development of a mini CRM for managing leads, appointments, and notifications. The application includes a dashboard with graphs, instant messaging, and an administration interface for managing users and announcements.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Python</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Django</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">MySQL</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">HTML</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">CSS</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Bootstrap</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">JavaScript</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">jQuery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: Health Tracker AI -->
+                    <div id="project-healthtracker" class="project-details hidden">
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#FFD580] mb-3 md:mb-4">Health Tracker AI</h2>
+                        <p class="text-xs md:text-sm text-[#E0E0E0] mb-4 md:mb-6">Academic Project</p>
+                        
+                        <div class="mb-4 md:mb-6 rounded-xl overflow-hidden border-2 border-[#FFD580]/50 bg-white/5">
+                            <img src="images/healthtracker.png" alt="Health Tracker AI Interface" class="w-full h-[200px] md:h-[280px] object-contain">
+                        </div>
+
+                        <div class="mb-4 md:mb-6">
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Description</h3>
+                            <p class="text-[#E0E0E0] leading-relaxed">
+                                A web application for tracking health metrics including weight, physical activities, nutrition, and sleep. Features an AI chatbot for personalized advice, interactive charts, and data export functionality in PDF/CSV formats.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Node.js</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">JavaScript</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">HTML</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">CSS</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">MySQL</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: JobMatch -->
+                    <div id="project-jobmatch" class="project-details hidden">
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#FFD580] mb-3 md:mb-4">JobMatch</h2>
+                        <p class="text-xs md:text-sm text-[#E0E0E0] mb-4 md:mb-6">Academic Project</p>
+                        
+                        <div class="mb-4 md:mb-6 rounded-xl overflow-hidden border-2 border-[#FFD580]/50 bg-white/5">
+                            <img src="images/JobMatch.png" alt="JobMatch Interface" class="w-full h-[200px] md:h-[280px] object-contain">
+                        </div>
+
+                        <div class="mb-4 md:mb-6">
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Description</h3>
+                            <p class="text-[#E0E0E0] leading-relaxed">
+                                A web platform connecting candidates and recruiters, featuring profile management, job postings, application tracking, and an assistant chatbot. Built with modern technologies for seamless user experience.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Node.js</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Express.js</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">React</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">SQL Server</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">JWT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: YNAB -->
+                    <div id="project-ynab" class="project-details hidden">
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#FFD580] mb-3 md:mb-4">YNAB (You Need A Budget)</h2>
+                        <p class="text-xs md:text-sm text-[#E0E0E0] mb-4 md:mb-6">Academic Project</p>
+                        
+                        <div class="mb-4 md:mb-6 rounded-xl overflow-hidden border-2 border-[#FFD580]/50 bg-white/5">
+                            <img src="images/YNAB.png" alt="YNAB Interface" class="w-full h-[200px] md:h-[280px] object-contain">
+                        </div>
+
+                        <div class="mb-4 md:mb-6">
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Description</h3>
+                            <p class="text-[#E0E0E0] leading-relaxed">
+                                A web application for managing expenses and budgets, allowing users to plan and track their finances effectively. Features budget allocation, expense tracking, and financial reporting.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Python</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">XAMPP</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">MySQL</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">HTML</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">CSS</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: AI Interview Platform -->
+                    <div id="project-aiinterview" class="project-details hidden">
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#FFD580] mb-3 md:mb-4">AI Interview Platform</h2>
+                        <p class="text-xs md:text-sm text-[#E0E0E0] mb-4 md:mb-6">Academic Project</p>
+                        
+                        <div class="mb-4 md:mb-6 rounded-xl overflow-hidden border-2 border-[#FFD580]/50 bg-white/5">
+                            <img src="images/interviewplateform.png" alt="AI Interview Platform Interface" class="w-full h-[200px] md:h-[280px] object-contain">
+                        </div>
+
+                        <div class="mb-4 md:mb-6">
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Description</h3>
+                            <p class="text-[#E0E0E0] leading-relaxed">
+                                A platform for simulating oral and technical interviews with AI. Includes technical quizzes for multiple programming languages, detailed reports with graphs, and secure authentication via Firebase.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold text-[#FFD580] mb-2 md:mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Go</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Firebase Authentication</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Firestore</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">HTML</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">JavaScript</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Chart.js</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">GSAP</span>
+                                <span class="px-3 py-1 bg-[#FFD580]/20 rounded-full text-sm border border-[#FFD580]">Web Speech API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Function to show selected project
+        function showProject(projectId) {
+            // Hide default view
+            document.getElementById('default-view').classList.add('hidden');
+            
+            // Hide all project details
+            const allProjects = document.querySelectorAll('.project-details');
+            allProjects.forEach(project => {
+                project.classList.add('hidden');
+            });
+            
+            // Show selected project
+            document.getElementById('project-' + projectId).classList.remove('hidden');
+            
+            // Update button styles
+            const allButtons = document.querySelectorAll('.project-btn');
+            allButtons.forEach(btn => {
+                btn.classList.remove('bg-[#FFD580]/30', 'border-[#FFD580]');
+                btn.classList.add('bg-[#FFD580]/10', 'border-[#FFD580]/50');
+            });
+            
+            // Highlight active button
+            event.currentTarget.classList.remove('bg-[#FFD580]/10', 'border-[#FFD580]/50');
+            event.currentTarget.classList.add('bg-[#FFD580]/30', 'border-[#FFD580]');
+            
+            // Scroll to top on mobile after selecting a project
+            if (window.innerWidth < 1024) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

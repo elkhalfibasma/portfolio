@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Basma EL KHALFI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-white overflow-x-hidden scroll-smooth bg-[#1C1E26] min-h-screen">
+    <!-- Background Image -->
+    <div class="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1147');">
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-70 -z-10"></div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-[#1C1E26]/70 backdrop-blur-md shadow-lg z-50" style="position: fixed !important; top: 0 !important;">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo text-2xl font-bold text-[#FFD580]">Basma EL KHALFI</div>
+            <nav class="flex space-x-6">
+                <a href="index.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Home</a>
+                <a href="index.html#about" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">About Me</a>
+                <a href="projects.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Projects</a>
+                <a href="certifications.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Certifications</a>
+                <a href="contact.html" class="nav-link text-[#FFD580] font-semibold">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <main class="pt-24 px-4 pb-20 min-h-screen flex items-center justify-center">
+        <div class="max-w-md mx-auto w-full relative z-10">
+            <!-- Contact Form -->
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-300/50 transition-all">
+                <h1 class="text-3xl lg:text-4xl font-bold text-[#1C1E26] mb-8 text-center">Send Me a Message</h1>
+                
+                <form id="contactForm" action="https://formspree.io/f/xwprgaar" method="POST" class="space-y-6">
+                    <!-- Name (First & Last) -->
+                    <div>
+                        <label class="block text-[#1C1E26] mb-2 font-medium">
+                            Name <span class="text-red-500">*</span>
+                        </label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    required 
+                                    class="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded text-[#000000] placeholder-gray-400 focus:outline-none focus:border-[#FFD580] transition"
+                                    style="color: #000000 !important;"
+                                    placeholder="First"
+                                >
+                                <span class="text-xs text-gray-500 mt-1 block">First</span>
+                            </div>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    required 
+                                    class="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded text-[#000000] placeholder-gray-400 focus:outline-none focus:border-[#FFD580] transition"
+                                    style="color: #000000 !important;"
+                                    placeholder="Last"
+                                >
+                                <span class="text-xs text-gray-500 mt-1 block">Last</span>
+                            </div>
+                        </div>
+                        <span class="error-message text-red-500 text-sm hidden mt-1" id="nameError">Veuillez entrer votre nom complet</span>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-[#1C1E26] mb-2 font-medium">
+                            Email <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            class="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded text-[#000000] placeholder-gray-400 focus:outline-none focus:border-[#FFD580] transition"
+                            style="color: #000000 !important;"
+                            placeholder="john@example.com"
+                        >
+                        <span class="error-message text-red-500 text-sm hidden mt-1" id="emailError">Veuillez entrer une adresse email valide</span>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-[#1C1E26] mb-2 font-medium">
+                            Message <span class="text-red-500">*</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required 
+                            rows="5"
+                            class="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded text-[#000000] placeholder-gray-400 focus:outline-none focus:border-[#FFD580] transition resize-none"
+                            style="color: #000000 !important;"
+                            placeholder="Votre message ici..."
+                        ></textarea>
+                        <span class="error-message text-red-500 text-sm hidden mt-1" id="messageError">Veuillez entrer votre message</span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit" 
+                        class="w-full px-8 py-4 bg-[#FF6B6B] text-white font-bold text-lg rounded hover:bg-[#FF5252] transition transform hover:scale-[1.02] uppercase tracking-wide"
+                    >
+                        Submit
+                    </button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="formMessage" class="hidden p-4 rounded text-center"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Form validation and submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Prevent form submission for validation
+            event.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Reset error messages
+            document.querySelectorAll('.error-message').forEach(el => el.classList.add('hidden'));
+            
+            // Validation
+            let isValid = true;
+            
+            if (firstName === '' || lastName === '') {
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (email === '' || !isValidEmail(email)) {
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (message === '') {
+                document.getElementById('messageError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            // Submit the form to Formspree
+            const form = document.getElementById('contactForm');
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showMessage('Message envoyé avec succès ! Je vous répondrai bientôt.', 'success');
+                    form.reset();
+                } else {
+                    showMessage('Erreur lors de l\'envoi. Veuillez réessayer ou envoyer un email directement à basmaelkhalfi56@gmail.com.', 'error');
+                }
+            })
+            .catch(error => {
+                showMessage('Erreur lors de l\'envoi. Veuillez réessayer ou envoyer un email directement à basmaelkhalfi56@gmail.com.', 'error');
+            });
+        });
+        
+        // Email validation helper
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Show success/error message
+        function showMessage(message, type) {
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = message;
+            messageDiv.classList.remove('hidden', 'bg-green-500', 'bg-red-500');
+            
+            if (type === 'success') {
+                messageDiv.classList.add('bg-green-500');
+            } else {
+                messageDiv.classList.add('bg-red-500');
+            }
+            
+            setTimeout(() => {
+                messageDiv.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

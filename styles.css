@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.logo {
+  text-shadow: 0 0 15px rgba(255, 213, 128, 0.7);
+}
+
+.nav-link {
+  position: relative;
+  color: white;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: #FFD580;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD580;
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* About Section */
+.bio {
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Décalage photo à gauche */
+.hero-right {
+  position: relative;
+  justify-content: flex-start;
+  transform: translateX(-20px);
+}
+
+/* Project Details Transitions */
+.project-details {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Certification Card Hover Effects */
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(255, 213, 128, 0.3);
+}
+
+/* Contact Form Styles */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255, 213, 128, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9CA3AF;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+    padding: 2rem;
+  }
+  .hero-right {
+    justify-content: center;
+    transform: none;
+  }
+  
+  /* Mobile nav adjustments */
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}

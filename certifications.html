@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Basma EL KHALFI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s;
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            animation: zoomIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #FFD580;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close-modal:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden scroll-smooth bg-[#1C1E26] min-h-screen">
+    <!-- Background Image -->
+    <div class="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1147');">
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-70 -z-10"></div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-[#1C1E26]/70 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo text-2xl font-bold text-[#FFD580]">Basma EL KHALFI</div>
+            <nav class="flex space-x-6">
+                <a href="index.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Home</a>
+                <a href="index.html#about" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">About Me</a>
+                <a href="projects.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Projects</a>
+                <a href="certifications.html" class="nav-link text-[#FFD580] font-semibold">Certifications</a>
+                <a href="contact.html" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Certifications Section -->
+    <main class="pt-24 px-6 pb-20 min-h-screen">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Certifications Grid (Cards 1–9) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center">
+                
+                <!-- Certification Card 1 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('oracle_apex_cloud_developer_professional')">
+                        <img src="images/Oracle APEX Cloud Developer Professional.png" alt="Oracle APEX Cloud Developer Professional" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Oracle APEX Cloud Developer Professional</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">Oracle University, 2025</p>
+                    <a href="pdfs/Oracle APEX Cloud Developer Professional.pdf" download="Oracle_APEX_Cloud_Developer_Professional.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 2 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('oracle_cloud_infrastructure_2025_devops')">
+                        <img src="images/Oracle Cloud Infrastructure 2025 Certified DevOps Professional.png" alt="Oracle Cloud Infrastructure 2025 Certified DevOps Professional" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Oracle Cloud Infrastructure 2025 Certified DevOps Professional</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">Oracle University, 2025</p>
+                    <a href="pdfs/Oracle Cloud Infrastructure 2025 Certified DevOps Professional.pdf" download="Oracle_Cloud_Infrastructure_2025_DevOps_Professional.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 3 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert3')">
+                        <img src="images/Coursera Introduction to Containers w Docker, Kubernetes & OpenShift .png" alt="Coursera Introduction to Containers w Docker, Kubernetes & OpenShift ELKHALFI Basma" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Coursera Introduction to Containers w Docker, Kubernetes & OpenShift ELKHALFI Basma</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">IBM, 2025</p>
+                    <a href="pdfs/Coursera Introduction to Containers w Docker, Kubernetes & OpenShift ELKHALFI Basma.pdf" download="Introduction_to_Containers_Docker_Kubernetes_OpenShift.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 4 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert4')">
+                        <img src="images/Programming for Everybody (Getting Started with Python).png" alt="Programming for Everybody (Getting Started with Python)" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Programming for Everybody (Getting Started with Python)</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">University of Michigan, 2024</p>
+                    <a href="pdfs/Programming for Everybody (Getting Started with Python).pdf" download="Programming_for_Everybody_Python.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 5 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert5')">
+                        <img src="images/react basics.png" alt="React Basics" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">React Basics</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">IMeta, 2024</p>
+                    <a href="pdfs/react basics.pdf" download="React_Basics.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 6 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert6')">
+                        <img src="images/Introduction to Java and Object-Oriented Programming.png" alt="Introduction to Java and Object-Oriented Programming" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Introduction to Java and Object-Oriented Programming</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">University of Pennsylvania, 2024</p>
+                    <a href="pdfs/Introduction to Java and Object-Oriented Programming.pdf" download="Introduction_to_Java_and_OOP.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 7 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert7')">
+                        <img src="images/Interactivity with JavaScript.png" alt="Interactivity with JavaScript" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Interactivity with JavaScript</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">University of Michigan, 2024</p>
+                    <a href="pdfs/Interactivity with JavaScript.pdf" download="Interactivity_with_JavaScript.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 8 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert8')">
+                        <img src="images/Software Engineering Software Design and Project Management.png" alt="Software Engineering Software Design and Project Management" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Software Engineering Software Design and Project Management</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">The Hong Kong University of Science and Technology, 2024</p>
+                    <a href="pdfs/Software Engineering Software Design and Project Management.pdf" download="Software_Engineering_Design_and_Management.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 9 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert9')">
+                        <img src="images/Delivering Quality Work with Agility.png" alt="Delivering Quality Work with Agility" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Delivering Quality Work with Agility</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">IBM, 2024</p>
+                    <a href="pdfs/Delivering Quality Work with Agility.pdf" download="Delivering_Quality_Work_with_Agility.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Last Row: Cards 10 and 11 (same size, centered) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center mt-8 max-w-4xl mx-auto">
+                <!-- Certification Card 10 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert10')">
+                        <img src="images/Introduction à la programmation orientée objet (en C++).png" alt="Introduction à la programmation orientée objet (en C++)" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Introduction à la programmation orientée objet (en C++)</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">EPFL, 2024</p>
+                    <a href="pdfs/Introduction à la programmation orientée objet (en C++).pdf" download="Introduction_to_OOP_CPP.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+
+                <!-- Certification Card 11 -->
+                <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
+                    <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert11')">
+                        <img src="images/Coursera Virtual Networks in Azure.png" alt="Coursera Virtual Networks in Azure" class="w-full h-48 object-contain rounded-xl" loading="lazy">
+                    </div>
+                    <h3 class="text-xl font-bold text-[#FFD580] mb-2">Coursera Virtual Networks in Azure</h3>
+                    <p class="text-[#E0E0E0] text-sm mb-4">Whizlabs, 2015</p>
+                    <a href="pdfs/Coursera Virtual Networks in Azure.pdf" download="Virtual_Networks_in_Azure.pdf" class="inline-flex items-center px-4 py-2 bg-[#FFD580] text-[#1C1E26] rounded-lg hover:bg-[#FFD580]/80 transition font-semibold mt-auto">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for viewing full-size images -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Function to open modal and display full-size image
+        function openModal(certId) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const certImages = {
+                'oracle_apex_cloud_developer_professional': 'images/Oracle APEX Cloud Developer Professional.png',
+                'oracle_cloud_infrastructure_2025_devops': 'images/Oracle Cloud Infrastructure 2025 Certified DevOps Professional.png',
+                'cert3': 'images/Coursera Introduction to Containers w Docker, Kubernetes & OpenShift .png',
+                'cert4': 'images/Programming for Everybody (Getting Started with Python).png',
+                'cert5': 'images/react basics.png',
+                'cert6': 'images/Introduction to Java and Object-Oriented Programming.png',
+                'cert7': 'images/Interactivity with JavaScript.png',
+                'cert8': 'images/Software Engineering Software Design and Project Management.png',
+                'cert9': 'images/Delivering Quality Work with Agility.png',
+                'cert10': 'images/Introduction à la programmation orientée objet (en C++).png',
+                'cert11': 'images/Coursera Virtual Networks in Azure.png'
+            };
+            modalImg.src = certImages[certId] || 'images/placeholder.jpg';
+            modal.classList.add('active');
+        }
+
+        // Function to close modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
