@@ -101,11 +101,13 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 40;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .menu-overlay.active {
@@ -118,13 +120,18 @@ html {
   position: fixed;
   top: 72px; /* hauteur du navbar */
   right: -100%;
-  width: 280px;
+  width: 200px;
   height: calc(100vh - 72px);
-  background: linear-gradient(180deg, #1C1E26 0%, #16181E 100%);
+  background: linear-gradient(180deg, rgba(28, 30, 38, 0.98) 0%, rgba(22, 24, 30, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease;
   z-index: 50;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
 }
 
 #mobile-menu.show {
@@ -133,14 +140,16 @@ html {
 
 #mobile-menu a {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.25rem;
   border-bottom: 1px solid rgba(255, 213, 128, 0.1);
   transition: all 0.3s ease;
+  text-align: left;
+  font-size: 0.95rem;
 }
 
 #mobile-menu a:hover {
-  background-color: rgba(255, 213, 128, 0.1);
-  padding-left: 2rem;
+  background-color: rgba(255, 213, 128, 0.15);
+  padding-left: 1.5rem;
 }
 
 /* Responsive */
