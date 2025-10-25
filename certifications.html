@@ -63,22 +63,40 @@
     <!-- Navbar -->
     <header class="fixed top-0 left-0 w-full bg-[#1C1E26]/70 backdrop-blur-md shadow-lg z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="logo text-2xl font-bold text-[#FFD580]">Basma EL KHALFI</div>
-            <nav class="flex space-x-6">
+            <div class="logo text-xl md:text-2xl font-bold text-[#FFD580]">Basma EL KHALFI</div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
                 <a href="/home" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Home</a>
                 <a href="/home#about" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">About Me</a>
                 <a href="/projects" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Projects</a>
                 <a href="/certifications" class="nav-link text-[#FFD580] font-semibold">Certifications</a>
                 <a href="/contact" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Contact</a>
             </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-[#FFD580] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col items-center bg-[#1C1E26]/95 backdrop-blur-md py-4 space-y-4">
+            <a href="/home" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Home</a>
+            <a href="/home#about" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">About Me</a>
+            <a href="/projects" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Projects</a>
+            <a href="/certifications" class="nav-link text-[#FFD580] font-semibold">Certifications</a>
+            <a href="/contact" class="nav-link text-[#E0E0E0] hover:text-[#FFD580] transition-colors">Contact</a>
         </div>
     </header>
 
     <!-- Certifications Section -->
-    <main class="pt-24 px-6 pb-20 min-h-screen">
+    <main class="pt-20 md:pt-24 px-4 md:px-6 pb-12 md:pb-20 min-h-screen">
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Certifications Grid (Cards 1–9) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 place-content-center">
                 
                 <!-- Certification Card 1 -->
                 <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
@@ -217,7 +235,7 @@
             </div>
 
             <!-- Last Row: Cards 10 and 11 (same size, centered) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center mt-8 max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 justify-items-center mt-4 md:mt-8 max-w-4xl mx-auto">
                 <!-- Certification Card 10 -->
                 <div class="certification-card backdrop-blur-md bg-[#1C1E26]/70 rounded-2xl p-6 shadow-2xl border border-white/20 hover:border-[#FFD580] transition-all duration-300 hover:scale-105 flex flex-col min-h-[350px]">
                     <div class="relative mb-4 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('cert10')">
@@ -292,6 +310,7 @@
             }
         });
     </script>
+    <script src="mobile-menu.js"></script>
 
     <script src="script.js"></script>
 </body>
